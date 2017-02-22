@@ -1,0 +1,109 @@
+body {
+	background:#2b292b;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.load-container {
+	clip-path: url(#thePath);
+	-webkit-clip-path: url(#thePath);
+	-moz-clip-path: url(#thePath);
+	-ms-clip-path: url(#thePath);
+	border:1px solid beige;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	/*overflow: hidden;*/
+	background-color: #202020;
+	
+
+}
+
+.load-container:after {
+	background-color: beige;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	position: absolute;
+	content: "";
+	transition: all 1.5s ease;
+	animation-name: loader;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*.load-container:hover:after {
+	top: 0%;
+}*/
+
+/*.load-filler {
+	background-color: beige;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	position: absolute;
+	content: "";
+	transition: all 1.5s ease;
+
+}*/
+
+
+.load-container svg {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+
+.content-txt {
+	color: white;
+	margin: 0 25%;
+}
+.content-txt h1{
+	text-align: center;
+	font-size: 96px;
+}
+
+.content-txt p, li{
+	font-size: 24px;
+	width: 50%;
+	display: inline-block;
+}
+
+.content-txt ul {
+	display: inline-block;
+	margin:0;
+	padding: 0;
+}
+
+.content-txt span {
+	background-color: aqua;
+	width: 40%;
+	height: 150px;
+	display: inline-block;
+	color: black;
+}
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////
+						ANIMATIONS
+////////////////////////////////////////////////////////// */
+
+@keyframes loader {
+    0%   {top:100%;}
+    50%   {top:30%;}
+    100% {top:0%;}
+}
