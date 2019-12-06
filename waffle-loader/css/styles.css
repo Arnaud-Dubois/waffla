@@ -1,0 +1,286 @@
+/* Scaffholding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Typography */
+
+h1 {
+    font-size: 8rem;
+    letter-spacing: 3px;
+    color: aliceblue;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 35%;
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+    color: var(--alternate-color);
+}
+
+.txt--small {
+    font-size: 0.5em;
+}
+
+
+/* Layout */
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.section {
+    background-size: cover;
+    color:black;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: beige;
+    padding: 30px;
+    color: #777;
+}
+
+.col--2 {
+    width: 50%;
+    padding: 15px;
+    margin-right: -4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.part0--intro {background-color:#ff5848;}
+.part1--oublie {background-color:#ffb751;}
+.part2--dolmen {background-color:#50edda;}
+.part3--saint {background-color:#ffb751;}
+.part4--cornet {background-color:#01e19a;}
+.part5--cake {background-color:#01bfe1;}
+.part6--belgian {background-color:#ffb751;}
+
+.title__container {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Github link */
+
+.github__link a {
+    padding: 15px;
+    background: var(--main-bg-color);
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    z-index: 1111;
+}
+
+/* SVG */
+
+.svg__container svg {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+.svg__container {
+    position: absolute;
+}
+
+.svg__container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: initial;
+}
+
+
+/* Sections */
+
+/* Intro */
+#l-histoire{
+    display: inline-block;
+}
+
+#mouse__container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,10%);
+}
+
+#mouse path {
+    stroke: aliceblue;
+}
+
+#mouse__ball path {
+    fill: aliceblue;
+    animation: scrollMouse 0.5s infinite alternate ease-out;
+}
+
+#arrow__container {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%,10%)scale(0.4);
+}
+
+#arrow path {
+    stroke: aliceblue;
+}
+
+#arrow { 
+    animation: fadeOne 2s infinite ease-out;
+}
+
+/* Oublie */
+#front-cast {
+    display: block;
+    transform: scale(1.08);
+    transform-origin: center;
+    z-index: 10;
+}
+
+#oublie {
+    display: block;
+    z-index: initial;
+}
+
+#back-cast {
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: initial;
+}
+
+/* Cake */
+#light, #candle, #cake {
+    opacity: 0;
+}
+
+/* Belgian */
+#strawberry-1, #strawberry-2, #strawberry-3, #strawberry-4 {
+    opacity: 0;
+}
+
+#cream-1, #cream-2, #cream-3, #cream-4, #cream-5 {
+    opacity: 0;
+    z-index: 5;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+    .col--2 {
+      width: 100%;
+      padding: 0;
+      transform: initial;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .section {
+        min-height: 90vh;
+        overflow: hidden;
+    }
+
+    .title__container {
+        width: 100%;
+        top: 25%;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .svg__container {
+        position: relative;
+    }
+    
+    .svg__container img {
+        width: 100%;
+    }
+    
+    .svg__container svg, .svg__container > div {
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+/* Animations */
+
+@keyframes scrollMouse {
+    0% {
+        transform:translateY(0px);
+    }
+    100% {
+        transform:translateY(20px);
+    }
+}
+
+@keyframes fadeOne {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(220px);
+        opacity: 0;
+    }
+}

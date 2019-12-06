@@ -1,0 +1,12 @@
+/* Styles */
+
+:root {
+    /* colors */
+    --main-bg-color: white;
+    --main-txt-color: black;
+    --alternate-color: #ff5848;
+    --focus-color: #01e19a;
+    /* fonts */
+    --title-font: 'Dancing Script', cursive;
+    --txt-font: 'Merriweather', serif;
+}

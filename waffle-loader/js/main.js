@@ -1,8 +1,8 @@
 (function($){
 
-	// GSAP ANIM
+	// GSAP animations
 
-	//scene part0
+	// scene part0
 	var lHistoire = $('#l-histoire'),
 		laGaufre = $('#la-gaufre'),
 		tlIntro = new TimelineLite({});
@@ -13,7 +13,7 @@
 			.from(laGaufre, 1.3, { y:-300,autoAlpha:0, ease:Bounce.easeOut})
 		;
 
-	//scene part1
+	// scene part1
 	var frontCast = $('#front-cast'),
 		backCast = $('#back-cast'),
 		oublie = $('#oublie'),
@@ -31,7 +31,7 @@
 			.from(txt, 0.6, { y:-30,autoAlpha:0, ease:Power2.easeOut}, 2.8)
 		;
 
-	//scene part2
+	// scene part2
 	var stonePillarLeft = $('#stone-pillar-left'),
 		stonePillarRight = $('#stone-pillar-right'),
 		stoneTop = $('#stone-top'),
@@ -46,7 +46,7 @@
 			.to(stoneTop, 0.25, {y:0, autoAlpha:1, ease:Power1.easeIn})
 		;
 
-	//scene part3
+	// scene part3
 	var saint = $('#saint'),
 		tlSaint = new TimelineMax({repeat:-1});
 
@@ -56,7 +56,7 @@
 			.to(saint, 0.5, {y:0, ease:Power0.easeNone})
 		;
 
-	//scene part4
+	// scene part4
 	var square = $('#square'),
 		cornet = $('#cornet'),
 		tlCornet = new TimelineMax({});
@@ -65,7 +65,7 @@
 			.to(square, 0.25, {autoAlpha:0, ease:Power0.easeNone}, 2)
 		;
 
-	//scene part5
+	// scene part5
 	var light = $('#light'),
 		candle = $('#candle'),
 		cake = $('#cake'),
@@ -79,7 +79,7 @@
 			.to(light, 0.3, {scale:1.06,transformOrigin:"50% 50%",autoAlpha:1, ease:Bounce.easeIn}, 1)
 		;	
 
-	//scene part6
+	// scene part6
 	var strawberry1 = $('#strawberry-1'),
 		 strawberry2 = $('#strawberry-2'),
 		 strawberry3 = $('#strawberry-3'),
@@ -114,90 +114,48 @@
 	//scene part1
 	var part1 = new ScrollMagic.Scene({
 		triggerElement: '#part1--trigger',
-		triggerHook: 0.34
+		triggerHook: 0.5
 	})
-	// .addIndicators({
-	// 		name:'fade part1',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'red'
-	// })
 	.setTween(tlOublie)
 	.addTo(controller);
 
 	//scene part2
 	var part2 = new ScrollMagic.Scene({
 		triggerElement: '#part2--trigger',
-		triggerHook: 0.34
+		triggerHook: 0.7
 	})
-	// .addIndicators({
-	// 		name:'fade part2',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'blue'
-	// })
 	.setTween(tlDolmen)
 	.addTo(controller);
 
 	//scene part3
 	var part3 = new ScrollMagic.Scene({
 		triggerElement: '#part3--trigger',
-		triggerHook: 0.5
+		triggerHook: 0.7
 	})
-	// .addIndicators({
-	// 		name:'fade part3',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'chocolate'
-	// })
 	.setTween(tlSaint)
 	.addTo(controller);
 
 	//scene part4
 	var part4 = new ScrollMagic.Scene({
 		triggerElement: '#part4--trigger',
-		triggerHook: 0.34
+		triggerHook: 0.7
 	})
-	// .addIndicators({
-	// 		name:'fade part4',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'red'
-	// })
 	.setTween(tlCornet)
 	.addTo(controller);
 
 	//scene part5
 	var part5 = new ScrollMagic.Scene({
 		triggerElement: '#part5--trigger',
-		triggerHook: 0.34
+		triggerHook: 0.7
 	})
-	// .addIndicators({
-	// 		name:'fade part5',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'red'
-	// })
 	.setTween(tlCake)
 	.addTo(controller);
 
 	//scene part6
 	var part6 = new ScrollMagic.Scene({
 		triggerElement: '#part6--trigger',
-		triggerHook: 0.34
+		triggerHook: 0.7
 	})
-	// .addIndicators({
-	// 		name:'fade part6',
-	// 		colorTrigger:'crimson',
-	// 		indent:400,
-	// 		colorStart:'hotpink',
-	// 		colorEnd:'red'
-	// })
 	.setTween(tlBelgian)
 	.addTo(controller);
 
